@@ -14,9 +14,10 @@ app.get("/", (req,res) => {
     })
 })
 
-app.get("/clientes", async(req,res) => {
-    const clientes = await db.selectCustomers();
-    res.json(clientes);
+// definir a rota /cliente
+app.get("/cliente", async(req,res) => {
+    const cliente = await db.selectCustomers();
+    res.json(cliente);
 })
 
 app.listen(port) //escutar as requisições que vem da porta.
